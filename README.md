@@ -14,6 +14,56 @@ Atau install langsung dari repository:
 pip install git+https://github.com/endymuhardin/terbilang.git
 ```
 
+## Menggunakan di Project Lain
+
+### Dengan `requirements.txt`
+
+Tambahkan baris berikut di `requirements.txt`:
+
+```
+terbilang @ git+https://github.com/endymuhardin/terbilang.git
+```
+
+Untuk pin ke commit atau tag tertentu:
+
+```
+terbilang @ git+https://github.com/endymuhardin/terbilang.git@v0.1.0
+terbilang @ git+https://github.com/endymuhardin/terbilang.git@main
+terbilang @ git+https://github.com/endymuhardin/terbilang.git@abc1234
+```
+
+Lalu install:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Dengan `pyproject.toml`
+
+Tambahkan di bagian `[project]` → `dependencies`:
+
+```toml
+[project]
+dependencies = [
+    "terbilang @ git+https://github.com/endymuhardin/terbilang.git",
+]
+```
+
+Untuk pin ke tag tertentu:
+
+```toml
+[project]
+dependencies = [
+    "terbilang @ git+https://github.com/endymuhardin/terbilang.git@v0.1.0",
+]
+```
+
+Lalu install project:
+
+```bash
+pip install .
+```
+
 ## Penggunaan
 
 ```python
